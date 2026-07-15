@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNav();
   initCommitteeGrids();
   initApplyForm();
+  initComplaintForm();
   initVerifyPage();
   initContactForm();
   setYear();
@@ -71,6 +72,50 @@ function personCard(m, lead) {
       <div class="role">${m.designation}</div>
       <div class="person-mobile">${m.mobile}</div>
     </div>`;
+}
+
+/* ---------------- Complaint / Grievance form (complaint.html) ---------------- */
+function initComplaintForm() {
+  const form = document.getElementById("complaint-form");
+  if (!form) return;
+
+  const memberRadios = document.querySelectorAll('input[name="is-member"]');
+  const memberIdField = document.getElementById("member-id-field");
+  memberRadios.forEach((r) =>
+    r.addEventListener("change", () => {
+      memberIdField.style.display = r.value === "yes" && r.checked ? "block" : "none";
+    })
+  );
+
+  const fileInput = document.getElementById("c-files");
+  const fileList = document.getElementById("c-file-list");
+  if (fileInput) {
+    fileInput.addEventListener("change", () => {
+      const names = Array.from(fileInput.files).map((f) => f.name);
+      fileList.textContent = names.length ? "Attached: " + names.join(", ") : "";
+    });
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const submitBtn = document.getElementById("complaint-submit-btn");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting…";
+
+    setTimeout(() => {
+      const year = new Date().getFullYear();
+      const serial = String(Math.floor(1 + Math.random() * 899999)).padStart(6, "0");
+      const refId = `TTWSB-GRV-${serial}/${year}`;
+
+      document.getElementById("complaint-ref").textContent = refId;
+      document.getElementById("complaint-form-wrap").style.display = "none";
+      document.getElementById("complaint-success").classList.add("show");
+      document.getElementById("complaint-success").scrollIntoView({ behavior: "smooth", block: "center" });
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit Complaint";
+    }, 1200);
+  });
 }
 
 /* ---------------- Membership application (apply.html) ---------------- */

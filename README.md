@@ -1,6 +1,7 @@
 # TTWSB Website — Demo Preview
 
 ### Latest revision — what changed
+- Added a **File a Complaint** page (`complaint.html`) — a harassment/grievance reporting form with member-ID lookup, file attachment, and a simulated submission that generates a reference number (`TTWSB-GRV-000123/2026`). Linked from the nav bar (next to Apply Now) and every page's footer.
 - Fixed the "Apply Now" button text being unreadable in the navigation bar.
 - Replaced the placeholder logo with the official TTWSB logo (`assets/logo.png`) site-wide, plus a matching favicon.
 - Updated registration number (**Reg. RAJS-616/2026**) and founding year (**2026**) across Home/About.
@@ -21,6 +22,7 @@ A front-end demo of the **Tvet Trainer Welfare Society of Bangladesh (TTWSB)** w
 | `membership.html` | Eligibility, benefits, fee table |
 | `apply.html` | 3-step membership application: info → payment → digital ID card with QR |
 | `verify.html` | Search/verify a member by ID (also reads `?id=` from a QR scan) |
+| `complaint.html` | Report harassment/grievances — form with file attachment and a simulated reference number |
 | `contact.html` | Contact info + message form |
 
 ## ⚠️ Important — this is a static front-end demo

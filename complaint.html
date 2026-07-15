@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File a Complaint — TTWSB</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-links">
+      <a href="#">Member Login</a>
+      <a href="verify.html">Verify Membership</a>
+      <a href="apply.html">Apply for Membership</a>
+    </div>
+    <div class="topbar-lang">ttwsb.org — demo preview</div>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-badge">
+        <img src="assets/logo.png" alt="TTWSB logo">
+      </span>
+      <span class="brand-text">
+        <span class="acronym">TTWSB</span>
+        <span class="fullname">TVET Trainers' Welfare Society of Bangladesh</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="committee.html">Committee</a>
+      <a href="membership.html">Membership</a>
+      <a href="verify.html">Verify Member</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="apply.html" class="btn btn-navy nav-cta">Apply Now</a>
+      <a href="complaint.html" class="btn btn-danger nav-cta">File Complaint</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / File a Complaint</div>
+    <span class="eyebrow">Grievance &amp; Harassment Reporting</span>
+    <h1>File a Complaint</h1>
+  </div>
+</div>
+
+<section>
+  <div class="container" style="max-width:760px;">
+    <div class="demo-banner">
+      <span>🧪</span>
+      <div><strong>Demo Mode —</strong> this form simulates submission for preview purposes. No data is actually stored or emailed yet. On the live site, submissions will reach TTWSB's Grievance &amp; Dispute Resolution Secretary securely.</div>
+    </div>
+
+    <div class="confidential-note">
+      <span>🔒</span>
+      <div>If you are a TVET trainer facing harassment, discrimination, or unfair treatment at your institution, you can report it here. All complaints are reviewed confidentially by TTWSB's Grievance &amp; Dispute Resolution Secretary.</div>
+    </div>
+
+    <div id="complaint-form-wrap" class="form-card">
+      <h3 style="margin-bottom:20px;">Complaint Details</h3>
+      <form id="complaint-form">
+
+        <div class="form-row">
+          <div class="field"><label>Your Full Name</label><input type="text" placeholder="Md. Kamal Hossain" required></div>
+          <div class="field"><label>Mobile Number</label><input type="tel" placeholder="01XXXXXXXXX" required></div>
+        </div>
+
+        <div class="field"><label>Email Address (optional)</label><input type="email" placeholder="you@example.com"></div>
+
+        <div class="field">
+          <label>Are you a registered TTWSB member?</label>
+          <div class="radio-inline">
+            <label><input type="radio" name="is-member" value="yes"> Yes</label>
+            <label><input type="radio" name="is-member" value="no" checked> No</label>
+          </div>
+        </div>
+        <div class="field" id="member-id-field" style="display:none;">
+          <label>Your TTWSB Membership ID</label>
+          <input type="text" placeholder="e.g. TTWSB-000001/2026">
+        </div>
+
+        <div class="form-row">
+          <div class="field"><label>Institution / Organisation Name</label><input type="text" placeholder="Name of the TTC / institute involved" required></div>
+          <div class="field"><label>Institution District</label>
+            <select>
+              <option value="">Select district</option>
+              <option>Dhaka</option><option>Chattogram</option><option>Rajshahi</option>
+              <option>Khulna</option><option>Sylhet</option><option>Barishal</option>
+              <option>Rangpur</option><option>Mymensingh</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label>Nature of Complaint</label>
+            <select required>
+              <option value="">Select a category</option>
+              <option>Verbal / Emotional Harassment</option>
+              <option>Physical Harassment</option>
+              <option>Sexual Harassment</option>
+              <option>Workplace Discrimination</option>
+              <option>Contractual / Salary Dispute</option>
+              <option>Unsafe Working Conditions</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label>Date of Incident (approx.)</label><input type="date"></div>
+        </div>
+
+        <div class="field">
+          <label>Describe what happened</label>
+          <textarea rows="6" placeholder="Please describe the incident(s) with as much detail as possible — what happened, when, and who was involved." required></textarea>
+        </div>
+
+        <div class="field">
+          <label>Supporting Documents / Evidence (optional)</label>
+          <input type="file" id="c-files" multiple>
+          <div class="hint" id="c-file-list"></div>
+          <div class="hint">You can attach photos, screenshots, letters, or audio as evidence. Demo only — files are not uploaded anywhere in this preview.</div>
+        </div>
+
+        <div class="field">
+          <label style="display:flex;align-items:flex-start;gap:8px;font-weight:500;">
+            <input type="checkbox" required style="width:auto;margin-top:3px;accent-color:var(--navy-900);">
+            <span>I declare that the information provided above is true to the best of my knowledge.</span>
+          </label>
+        </div>
+
+        <button type="submit" id="complaint-submit-btn" class="btn btn-danger btn-block" style="border-width:2px;">Submit Complaint</button>
+      </form>
+    </div>
+
+    <div id="complaint-success" class="result-panel">
+      <div class="check-badge">✓</div>
+      <h3>Complaint received (demo)</h3>
+      <p>Thank you — your complaint has been logged with reference number <strong id="complaint-ref" style="font-family:var(--font-mono);color:var(--navy-900);">—</strong>.</p>
+      <p style="font-size:13.5px;">📧 In production, the Grievance &amp; Dispute Resolution Secretary would be notified automatically and would follow up with you directly.</p>
+      <a href="index.html" class="btn btn-outline" style="border-color:var(--navy-900);color:var(--navy-900);margin-top:10px;">Return to Home →</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="TTWSB logo">
+          <span class="acronym">TTWSB</span>
+        </div>
+        <p style="color:#9fb0cc;font-size:13.5px;max-width:280px;">A government-registered welfare society uniting TVET trainers across Bangladesh.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="about.html">About Us</a>
+        <a href="committee.html">Executive Committee</a>
+        <a href="membership.html">Membership</a>
+        <a href="verify.html">Verify a Member</a>
+      </div>
+      <div>
+        <h4>Membership</h4>
+        <a href="apply.html">Apply Now</a>
+        <a href="membership.html">Fees &amp; Benefits</a>
+        <a href="complaint.html">File a Complaint</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="contact.html">Dhaka, Bangladesh</a>
+        <a href="mailto:info@ttwsb.org">info@ttwsb.org</a>
+        <a href="tel:+8800000000">+880 000 000 000</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> TTWSB — TVET Trainers' Welfare Society of Bangladesh</span>
+      <span>Demo site built for committee preview — not yet live at ttwsb.org</span>
+    </div>
+  </div>
+</footer>
+<div class="site-credit">All rights reserved to Mahbub Hassan, Technical Editor, TTWSB</div>
+
+<script src="js/members-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

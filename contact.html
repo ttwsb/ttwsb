@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — TTWSB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-links">
+      <a href="#">Member Login</a>
+      <a href="verify.html">Verify Membership</a>
+      <a href="apply.html">Apply for Membership</a>
+    </div>
+    <div class="topbar-lang">ttwsb.org — demo preview</div>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-badge">
+        <svg width="46" height="46" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#0B2545">
+            <circle cx="23" cy="23" r="14"/>
+            <rect x="20" y="1" width="6" height="10" rx="2"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(45 23 23)"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(90 23 23)"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(135 23 23)"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(180 23 23)"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(225 23 23)"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(270 23 23)"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(315 23 23)"/>
+          </g>
+          <circle cx="23" cy="23" r="9" fill="#F2A93B"/>
+          <text x="23" y="27.5" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#0B2545" text-anchor="middle">T</text>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="acronym">TTWSB</span>
+        <span class="fullname">TVET Trainers' Welfare Society of Bangladesh</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="committee.html">Committee</a>
+      <a href="membership.html">Membership</a>
+      <a href="verify.html">Verify Member</a>
+      <a href="contact.html" class="active">Contact Us</a>
+      <a href="apply.html" class="btn btn-navy nav-cta">Apply Now</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Contact Us</div>
+    <span class="eyebrow">Get in Touch</span>
+    <h1>Contact TTWSB</h1>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="grid-4" style="margin-bottom:56px;">
+      <div class="info-card"><div class="icon">📍</div><h3 style="font-size:15px;">Head Office</h3><p style="margin-bottom:0;font-size:13.5px;">[Address to be added], Dhaka, Bangladesh</p></div>
+      <div class="info-card"><div class="icon">📞</div><h3 style="font-size:15px;">Phone</h3><p style="margin-bottom:0;font-size:13.5px;">+880 000 000 000</p></div>
+      <div class="info-card"><div class="icon">✉️</div><h3 style="font-size:15px;">Email</h3><p style="margin-bottom:0;font-size:13.5px;">info@ttwsb.org</p></div>
+      <div class="info-card"><div class="icon">🕘</div><h3 style="font-size:15px;">Office Hours</h3><p style="margin-bottom:0;font-size:13.5px;">Sun–Thu, 9am–5pm</p></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="form-card">
+        <h3 style="margin-bottom:20px;">Send a message</h3>
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="field"><label>Name</label><input type="text" required></div>
+            <div class="field"><label>Email</label><input type="email" required></div>
+          </div>
+          <div class="field"><label>Subject</label><input type="text" required></div>
+          <div class="field"><label>Message</label><textarea rows="5" required></textarea></div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          <div id="contact-success" style="display:none;margin-top:16px;padding:14px;background:#E7F7EC;color:#1e7a45;border-radius:8px;font-size:14px;">
+            ✓ Message noted — in this demo no message is actually sent. On the live site, this connects to a real inbox.
+          </div>
+        </form>
+      </div>
+      <div style="background:var(--paper-100);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;min-height:320px;text-align:center;padding:30px;">
+        <div>
+          <div style="font-size:40px;margin-bottom:10px;">🗺️</div>
+          <p style="margin-bottom:0;color:var(--slate-500);">Map placeholder — add your office location once the address is finalised.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg width="34" height="34" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#ffffff" opacity="0.9">
+              <circle cx="23" cy="23" r="14" fill="#12335e"/>
+              <rect x="20" y="1" width="6" height="10" rx="2"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(45 23 23)"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(90 23 23)"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(135 23 23)"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(180 23 23)"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(225 23 23)"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(270 23 23)"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(315 23 23)"/>
+            </g>
+            <circle cx="23" cy="23" r="9" fill="#F2A93B"/>
+            <text x="23" y="27.5" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#0B2545" text-anchor="middle">T</text>
+          </svg>
+          <span class="acronym">TTWSB</span>
+        </div>
+        <p style="color:#9fb0cc;font-size:13.5px;max-width:280px;">A government-registered welfare society uniting TVET trainers across Bangladesh.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="about.html">About Us</a>
+        <a href="committee.html">Executive Committee</a>
+        <a href="membership.html">Membership</a>
+        <a href="verify.html">Verify a Member</a>
+      </div>
+      <div>
+        <h4>Membership</h4>
+        <a href="apply.html">Apply Now</a>
+        <a href="membership.html">Fees &amp; Benefits</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="contact.html">Dhaka, Bangladesh</a>
+        <a href="mailto:info@ttwsb.org">info@ttwsb.org</a>
+        <a href="tel:+8800000000">+880 000 000 000</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> TTWSB — TVET Trainers' Welfare Society of Bangladesh</span>
+      <span>Demo site built for committee preview — not yet live at ttwsb.org</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/members-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

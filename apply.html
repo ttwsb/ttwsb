@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply for Membership — TTWSB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-links">
+      <a href="#">Member Login</a>
+      <a href="verify.html">Verify Membership</a>
+      <a href="apply.html">Apply for Membership</a>
+    </div>
+    <div class="topbar-lang">ttwsb.org — demo preview</div>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-badge">
+        <svg width="46" height="46" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#0B2545">
+            <circle cx="23" cy="23" r="14"/>
+            <rect x="20" y="1" width="6" height="10" rx="2"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(45 23 23)"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(90 23 23)"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(135 23 23)"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(180 23 23)"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(225 23 23)"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(270 23 23)"/>
+            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(315 23 23)"/>
+          </g>
+          <circle cx="23" cy="23" r="9" fill="#F2A93B"/>
+          <text x="23" y="27.5" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#0B2545" text-anchor="middle">T</text>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="acronym">TTWSB</span>
+        <span class="fullname">TVET Trainers' Welfare Society of Bangladesh</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="committee.html">Committee</a>
+      <a href="membership.html">Membership</a>
+      <a href="verify.html">Verify Member</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="apply.html" class="btn btn-navy nav-cta">Apply Now</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Apply for Membership</div>
+    <span class="eyebrow">New Member Application</span>
+    <h1>Apply for TTWSB Membership</h1>
+  </div>
+</div>
+
+<section>
+  <div class="container" style="max-width:760px;">
+    <div class="demo-banner">
+      <span>🧪</span>
+      <div><strong>Demo Mode —</strong> this preview simulates the full flow (form → payment → email → digital ID). No real payment is charged and no real email is sent. On the live site at ttwsb.org this will connect to a real payment gateway (e.g. bKash/Nagad/SSLCommerz), a database, and an automated email service.</div>
+    </div>
+
+    <div class="steps" id="apply-form">
+      <div class="step active" data-n="1">Information</div>
+      <div class="step" data-n="2">Payment</div>
+      <div class="step" data-n="3">Your ID Card</div>
+    </div>
+
+    <div class="form-card">
+
+      <!-- Panel 1: Info -->
+      <div class="form-panel" data-panel="1">
+        <h3 style="margin-bottom:20px;">Personal &amp; Professional Information</h3>
+        <div class="form-row">
+          <div class="field"><label>Full Name</label><input id="f-name" type="text" placeholder="Md. Kamal Hossain" required></div>
+          <div class="field"><label>National ID (NID) Number</label><input id="f-nid" type="text" placeholder="1234567890" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>Email Address</label><input id="f-email" type="email" placeholder="you@example.com" required></div>
+          <div class="field"><label>Mobile Number</label><input id="f-phone" type="tel" placeholder="01XXXXXXXXX" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>Institute / TTC Name</label><input id="f-institute" type="text" placeholder="TTC Mirpur, Dhaka" required></div>
+          <div class="field"><label>Trade / Subject Taught</label><input id="f-trade" type="text" placeholder="Electrical, Civil, IT…" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>District</label>
+            <select id="f-district" required>
+              <option value="">Select district</option>
+              <option>Dhaka</option><option>Chattogram</option><option>Rajshahi</option>
+              <option>Khulna</option><option>Sylhet</option><option>Barishal</option>
+              <option>Rangpur</option><option>Mymensingh</option>
+            </select>
+          </div>
+          <div class="field"><label>Years of Experience</label><input id="f-exp" type="number" min="0" placeholder="5"></div>
+        </div>
+        <div class="field">
+          <label>Passport-size Photo</label>
+          <input type="file" accept="image/*">
+          <div class="hint">Demo only — uploaded files are not stored in this preview.</div>
+        </div>
+        <div style="text-align:right;margin-top:8px;">
+          <button type="button" class="btn btn-primary" data-next>Continue to Payment →</button>
+        </div>
+      </div>
+
+      <!-- Panel 2: Payment -->
+      <div class="form-panel" data-panel="2" style="display:none;">
+        <h3 style="margin-bottom:6px;">Payment</h3>
+        <p style="margin-bottom:20px;">Application fee + first year membership: <strong style="color:var(--navy-900);">৳ 1,500</strong></p>
+        <div class="pay-methods">
+          <label class="pay-method">
+            <input type="radio" name="paymethod" value="bkash">
+            <div style="font-size:22px;">📱</div>
+            <div class="pm-name">bKash</div>
+          </label>
+          <label class="pay-method">
+            <input type="radio" name="paymethod" value="nagad">
+            <div style="font-size:22px;">📲</div>
+            <div class="pm-name">Nagad</div>
+          </label>
+          <label class="pay-method">
+            <input type="radio" name="paymethod" value="card">
+            <div style="font-size:22px;">💳</div>
+            <div class="pm-name">Debit / Credit Card</div>
+          </label>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <button type="button" class="btn btn-outline" style="border-color:var(--navy-900);color:var(--navy-900);" data-back>← Back</button>
+          <button type="button" class="btn btn-primary" id="pay-now-btn">Pay Now (Demo)</button>
+        </div>
+      </div>
+
+      <!-- Panel 3: Result -->
+      <div class="form-panel" data-panel="3" style="display:none;">
+        <div style="text-align:center;">
+          <div class="check-badge">✓</div>
+          <h3>Payment successful (demo)</h3>
+          <p>Welcome, <strong id="result-name">—</strong>. Your membership ID is <strong id="result-id" style="font-family:var(--font-mono);color:var(--navy-900);">—</strong>.</p>
+          <p style="font-size:13.5px;">📧 In production, a confirmation email would be sent automatically to <span id="result-email">—</span>.</p>
+        </div>
+
+        <div style="display:flex;justify-content:center;margin:28px 0;">
+          <div class="id-card" style="max-width:340px;">
+            <div class="id-card-top">
+              <span class="id-card-org">TTWSB Member Card</span>
+              <span id="card-status" class="id-card-status status-active">ACTIVE</span>
+            </div>
+            <div class="id-card-body">
+              <div class="id-card-photo" id="card-initials">—</div>
+              <div>
+                <div class="id-card-name" id="card-name">—</div>
+                <div class="id-card-role" id="card-role">—</div>
+                <div class="id-card-role" id="card-valid">—</div>
+              </div>
+            </div>
+            <div class="id-card-meta" style="align-items:center;">
+              <span id="card-id">—</span>
+              <span id="card-qr" class="id-card-qr"></span>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;" class="no-print">
+          <button class="btn btn-navy" onclick="window.print()">🖨️ Print ID Card</button>
+          <a href="verify.html" class="btn btn-outline" style="border-color:var(--navy-900);color:var(--navy-900);">Verify This ID →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg width="34" height="34" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#ffffff" opacity="0.9">
+              <circle cx="23" cy="23" r="14" fill="#12335e"/>
+              <rect x="20" y="1" width="6" height="10" rx="2"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(45 23 23)"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(90 23 23)"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(135 23 23)"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(180 23 23)"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(225 23 23)"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(270 23 23)"/>
+              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(315 23 23)"/>
+            </g>
+            <circle cx="23" cy="23" r="9" fill="#F2A93B"/>
+            <text x="23" y="27.5" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#0B2545" text-anchor="middle">T</text>
+          </svg>
+          <span class="acronym">TTWSB</span>
+        </div>
+        <p style="color:#9fb0cc;font-size:13.5px;max-width:280px;">A government-registered welfare society uniting TVET trainers across Bangladesh.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="about.html">About Us</a>
+        <a href="committee.html">Executive Committee</a>
+        <a href="membership.html">Membership</a>
+        <a href="verify.html">Verify a Member</a>
+      </div>
+      <div>
+        <h4>Membership</h4>
+        <a href="apply.html">Apply Now</a>
+        <a href="membership.html">Fees &amp; Benefits</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="contact.html">Dhaka, Bangladesh</a>
+        <a href="mailto:info@ttwsb.org">info@ttwsb.org</a>
+        <a href="tel:+8800000000">+880 000 000 000</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> TTWSB — TVET Trainers' Welfare Society of Bangladesh</span>
+      <span>Demo site built for committee preview — not yet live at ttwsb.org</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/members-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

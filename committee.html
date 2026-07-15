@@ -6,6 +6,7 @@
 <title>Executive Committee — TTWSB</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -24,21 +25,7 @@
   <div class="container header-inner">
     <a href="index.html" class="brand">
       <span class="brand-badge">
-        <svg width="46" height="46" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
-          <g fill="#0B2545">
-            <circle cx="23" cy="23" r="14"/>
-            <rect x="20" y="1" width="6" height="10" rx="2"/>
-            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(45 23 23)"/>
-            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(90 23 23)"/>
-            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(135 23 23)"/>
-            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(180 23 23)"/>
-            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(225 23 23)"/>
-            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(270 23 23)"/>
-            <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(315 23 23)"/>
-          </g>
-          <circle cx="23" cy="23" r="9" fill="#F2A93B"/>
-          <text x="23" y="27.5" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#0B2545" text-anchor="middle">T</text>
-        </svg>
+        <img src="assets/logo.png" alt="TTWSB logo">
       </span>
       <span class="brand-text">
         <span class="acronym">TTWSB</span>
@@ -61,29 +48,24 @@
 <div class="page-head">
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a> / Committee</div>
-    <span class="eyebrow">Leadership</span>
-    <h1>Executive Committee — 21 Members</h1>
+    <span class="eyebrow">Leadership · 2026–2029 Term</span>
+    <h1>Advisory Panel &amp; Executive Committee</h1>
   </div>
 </div>
 
 <section>
   <div class="container">
-    <div class="demo-banner">
-      <span>⚠️</span>
-      <div><strong>Sample data —</strong> names below are placeholders for this demo. Replace them with your actual committee members' details in <code>js/members-data.js</code> before publishing.</div>
+    <div class="group-heading">
+      <span class="eyebrow" style="margin:0;">Advisory Panel</span>
+      <span class="badge-count">5 Members</span>
     </div>
+    <div class="grid-4" id="advisory-grid" style="margin-bottom:56px;"></div>
 
-    <div class="section-head">
-      <span class="eyebrow">Core Leadership</span>
-      <h2 style="font-size:24px;">President, Secretaries &amp; Treasurer</h2>
+    <div class="group-heading">
+      <span class="eyebrow" style="margin:0;">Executive Committee</span>
+      <span class="badge-count">21 Members</span>
     </div>
-    <div class="grid-4" id="committee-lead" style="margin-bottom:56px;"></div>
-
-    <div class="section-head">
-      <span class="eyebrow">Full Committee</span>
-      <h2 style="font-size:24px;">All 21 elected members</h2>
-    </div>
-    <div class="grid-4" id="committee-grid"></div>
+    <div class="grid-4" id="executive-grid"></div>
   </div>
 </section>
 
@@ -92,21 +74,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <svg width="34" height="34" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#ffffff" opacity="0.9">
-              <circle cx="23" cy="23" r="14" fill="#12335e"/>
-              <rect x="20" y="1" width="6" height="10" rx="2"/>
-              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(45 23 23)"/>
-              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(90 23 23)"/>
-              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(135 23 23)"/>
-              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(180 23 23)"/>
-              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(225 23 23)"/>
-              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(270 23 23)"/>
-              <rect x="20" y="1" width="6" height="10" rx="2" transform="rotate(315 23 23)"/>
-            </g>
-            <circle cx="23" cy="23" r="9" fill="#F2A93B"/>
-            <text x="23" y="27.5" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#0B2545" text-anchor="middle">T</text>
-          </svg>
+          <img src="assets/logo.png" alt="TTWSB logo">
           <span class="acronym">TTWSB</span>
         </div>
         <p style="color:#9fb0cc;font-size:13.5px;max-width:280px;">A government-registered welfare society uniting TVET trainers across Bangladesh — advocating for professional recognition, welfare and skills development.</p>
@@ -137,6 +105,7 @@
     </div>
   </div>
 </footer>
+<div class="site-credit">All rights reserved to Mahbub Hassan, Technical Editor, TTWSB</div>
 
 <script src="js/members-data.js"></script>
 <script src="js/main.js"></script>

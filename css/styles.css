@@ -109,6 +109,32 @@ nav.main-nav a{
 nav.main-nav a:hover{background:var(--paper-100);color:var(--navy-900);}
 nav.main-nav a.active{color:var(--navy-900);background:var(--paper-100);}
 .nav-cta{margin-left:8px;}
+nav.main-nav a.btn-navy{color:#fff;}
+nav.main-nav a.btn-navy:hover{color:#fff;background:var(--navy-700);}
+
+/* Logo image (replaces the generated monogram) */
+.brand-badge img{display:block;width:46px;height:46px;object-fit:contain;border-radius:50%;}
+.footer-brand img{display:block;width:38px;height:38px;object-fit:contain;border-radius:50%;}
+.id-card-badge-img{width:26px;height:26px;object-fit:contain;border-radius:50%;}
+
+/* Committee member photo (falls back to initials avatar if no photo) */
+.person-photo{
+  width:74px;height:74px;border-radius:50%;object-fit:cover;margin:0 auto 14px;
+  border:2px solid var(--paper-100);box-shadow:var(--shadow-sm);display:block;
+}
+.person-card.lead .person-photo{width:88px;height:88px;}
+.person-mobile{font-family:var(--font-mono);font-size:11.5px;color:var(--slate-500);margin-top:4px;}
+.group-heading{display:flex;align-items:center;gap:10px;margin:0 0 22px;}
+.group-heading .badge-count{
+  font-family:var(--font-mono);font-size:12px;background:var(--navy-900);color:var(--amber-500);
+  padding:3px 10px;border-radius:999px;
+}
+
+/* Site credit line under the footer */
+.site-credit{
+  text-align:center;font-size:12px;color:#5b6d8c;padding:14px 0;background:#061527;
+  border-top:1px solid rgba(255,255,255,.06);
+}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;}
 .nav-toggle span{display:block;width:24px;height:2.5px;background:var(--navy-900);margin:5px 0;border-radius:2px;}
 

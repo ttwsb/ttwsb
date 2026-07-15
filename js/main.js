@@ -40,35 +40,36 @@ function initNav() {
 
 /* ---------------- Committee grids ---------------- */
 function initCommitteeGrids() {
-  const leadTarget = document.getElementById("committee-lead");
-  const gridTarget = document.getElementById("committee-grid");
+  const advisoryTarget = document.getElementById("advisory-grid");
+  const execTarget = document.getElementById("executive-grid");
   const homeTeaser = document.getElementById("committee-teaser");
 
-  if (typeof COMMITTEE === "undefined") return;
+  if (typeof EXECUTIVE_COMMITTEE === "undefined") return;
 
-  if (leadTarget && gridTarget) {
-    const leadRoles = ["President", "General Secretary", "Treasurer", "Technical Affairs Secretary"];
-    const lead = COMMITTEE.filter((m) => leadRoles.includes(m.role));
-    const rest = COMMITTEE.filter((m) => !leadRoles.includes(m.role));
-
-    leadTarget.innerHTML = lead.map((m) => personCard(m, true)).join("");
-    gridTarget.innerHTML = rest.map((m) => personCard(m, false)).join("");
+  if (advisoryTarget) {
+    advisoryTarget.innerHTML = ADVISORY_PANEL.map((m) => personCard(m, true)).join("");
+  }
+  if (execTarget) {
+    execTarget.innerHTML = EXECUTIVE_COMMITTEE.map((m) => personCard(m, false)).join("");
   }
 
   if (homeTeaser) {
-    const roles = ["President", "General Secretary", "Treasurer", "Technical Affairs Secretary"];
-    const picks = COMMITTEE.filter((m) => roles.includes(m.role));
+    const all = [...ADVISORY_PANEL, ...EXECUTIVE_COMMITTEE];
+    const picks = HOME_TEASER_DESIGNATIONS.map((d) => all.find((m) => m.designation === d)).filter(Boolean);
     homeTeaser.innerHTML = picks.map((m) => personCard(m, true)).join("");
   }
 }
 
 function personCard(m, lead) {
+  const photoTag = m.photo
+    ? `<img class="person-photo" src="${m.photo}" alt="${m.name}" loading="lazy">`
+    : `<div class="person-avatar">${initials(m.name)}</div>`;
   return `
     <div class="person-card ${lead ? "lead" : ""}">
-      <div class="person-avatar">${initials(m.name)}</div>
+      ${photoTag}
       <h4>${m.name}</h4>
-      <div class="role">${m.role}</div>
-      <div class="loc">${m.loc}</div>
+      <div class="role">${m.designation}</div>
+      <div class="person-mobile">${m.mobile}</div>
     </div>`;
 }
 
@@ -135,8 +136,8 @@ function initApplyForm() {
       const institute = document.getElementById("f-institute").value || "—";
 
       const year = new Date().getFullYear();
-      const serial = String(Math.floor(100000 + Math.random() * 899999));
-      const memberId = `TTWSB-${year}-${serial}`;
+      const serial = String(Math.floor(1 + Math.random() * 899999)).padStart(6, "0");
+      const memberId = `TTWSB-${serial}/${year}`;
       const validTill = new Date();
       validTill.setFullYear(validTill.getFullYear() + 1);
       const validTillStr = validTill.toISOString().slice(0, 10);

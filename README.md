@@ -1,5 +1,14 @@
 # TTWSB Website — Demo Preview
 
+### Latest revision — what changed
+- Fixed the "Apply Now" button text being unreadable in the navigation bar.
+- Replaced the placeholder logo with the official TTWSB logo (`assets/logo.png`) site-wide, plus a matching favicon.
+- Updated registration number (**Reg. RAJS-616/2026**) and founding year (**2026**) across Home/About.
+- Membership ID format changed to `TTWSB-000001/2026` style (serial/year).
+- Committee page now shows the real **Advisory Panel (5)** and **Executive Committee (21)** — names, mobile numbers, designations and photos, sourced from the provided PDF (names/roles) and Word file (photos, matched by mobile number).
+- Added a credit line at the bottom of every page: "All rights reserved to Mahbub Hassan, Technical Editor, TTWSB".
+
+
 A front-end demo of the **Tvet Trainer Welfare Society of Bangladesh (TTWSB)** website, built to preview with your executive committee before the real domain (`ttwsb.org`) and hosting go live.
 
 ## What's included
@@ -58,7 +67,7 @@ Once you actually buy `ttwsb.org`, you can point its DNS at this same GitHub Pag
 
 ## Customize before you show the committee
 
-- **Committee members**: edit the `COMMITTEE` array in `js/members-data.js` — replace `Placeholder Name` with real names, roles, and districts (already includes your role, "Technical Affairs Secretary").
+- **Committee members**: the `ADVISORY_PANEL` and `EXECUTIVE_COMMITTEE` arrays in `js/members-data.js` now hold your real 2026–2029 committee (5 advisors + 21 executive members, with photos, mobile numbers, and designations). Edit that file directly for any future changes (new term, reshuffles, etc.).
 - **Organization details**: search each `.html` file for `[registration authority & number to be added]`, the placeholder address, phone, and email, and replace with real details.
 - **Fees**: update the amounts in `membership.html` and `apply.html`.
 - **Colors/branding**: all colors are CSS variables at the top of `css/styles.css` (`:root { --navy-900: ...; --amber-500: ...; }`) — change once, applies everywhere.
